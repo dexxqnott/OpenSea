@@ -26,8 +26,6 @@
       padding: 80px 20px 120px 20px;
       border-radius: 12px;
       text-shadow: 0 0 6px rgba(0,0,0,0.7);
-      position: relative;
-      z-index: 1;
     }
     h2, h3 {
       color: #90caf9;
@@ -54,12 +52,6 @@
       border-radius: 14px;
       box-shadow: 0 0 15px rgba(33, 150, 243, 0.7);
     }
-    footer {
-      margin-top: 50px;
-      padding-top: 25px;
-      border-top: 1px solid #263238;
-      text-align: center;
-    }
     .background-break {
       background-image: url('https://www.zenchain.io/_next/image?url=%2Fassets%2Fimages%2Ftoken-3d.webp&w=640&q=75');
       background-size: contain;
@@ -85,6 +77,26 @@
       opacity: 1;
       transform: translateY(0);
     }
+    .image-animated {
+      display: block;
+      max-width: 100%;
+      margin: 20px auto;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0, 150, 255, 0.2);
+      transform: scale(0.95);
+      opacity: 0;
+      transition: transform 0.9s ease, opacity 0.9s ease;
+    }
+    .image-animated.visible {
+      transform: scale(1);
+      opacity: 1;
+    }
+    footer {
+      margin-top: 50px;
+      padding-top: 25px;
+      border-top: 1px solid #263238;
+      text-align: center;
+    }
     @media (max-width: 600px) {
       body { margin: 20px 15px; padding: 15px; }
       .container { padding: 20px; }
@@ -103,7 +115,7 @@
       Through its innovative architecture and user-first ecosystem, ZenChain empowers developers, users, and businesses to interact seamlessly across multiple blockchain networks without compromising on speed, cost, or security.
     </p>
 
-    <h2 class="scroll-fade-in"></h2>
+    <h2 class="scroll-fade-in">Key Features and Technologies</h2>
 
     <h3 class="scroll-fade-in">1. Cross-Chain Interoperability Module (CCIM)</h3>
     <p class="scroll-fade-in">
@@ -139,23 +151,22 @@
     <h2 class="scroll-fade-in">ZenQuest: Incentivized Learning and Participation</h2>
     <p class="scroll-fade-in">
       ZenQuest is ZenChain’s interactive learning program that rewards community members for completing educational quests, reporting bugs, and engaging with the ecosystem. It’s a gateway to earn while learning.
-     <a href="https://zenquest.zenchain.io?referral=Xt81EXFysqn730NeXr-so8J_pXiloBk3eEB_edepr80" target="_blank">Testnet</a>.
     </p>
 
-   
-   
-    
+    <img src="https://www.zenchain.io/_next/image?url=%2Fassets%2Fimages%2Frewards%2Fmain.webp&w=640&q=75" alt="ZenQuest Main" class="image-animated" />
+    <img src="https://www.zenchain.io/_next/image?url=%2Fassets%2Fimages%2Frewards%2Fbottom-left.webp&w=384&q=75" alt="ZenQuest Rewards" class="image-animated" />
+
     <p class="scroll-fade-in">
       To explore more about the technology and join the movement, visit the official website: <a href="https://zenchain.io" target="_blank">zenchain.io</a>.
     </p>
 
     <footer>
-      <p></p>
+      <p>© 2025 ZenChain Community. All rights reserved.</p>
     </footer>
   </div>
 
   <script>
-    const scrollElements = document.querySelectorAll('.scroll-fade-in, .background-break');
+    const scrollElements = document.querySelectorAll('.scroll-fade-in, .background-break, .image-animated');
     const observer = new IntersectionObserver(entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
